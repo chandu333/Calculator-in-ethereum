@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<body background ="https://ak7.picdn.net/shutterstock/videos/6119477/thumb/1.jpg"
+	></body>
+	<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,19 +12,19 @@
 </head>
 <body>
         <h2 style ="text-align: center">SIMPLE CALCULATOR</h2>
-        
+        <br><br><br><br>
        
         Input1:<input type="text" name="input" id = "input1" >
         
         Input2:
         <input type="text" name="input" id = "input2" >
-        <br><br>
+        <br><br><br><br>
        
-          <button id ="mult">multilication</button>
-          <button id = "div">division</button>
-          <button id = "add">addition</button>
-          <button id = "sub">subtraction</button>
-        <button id="reset">reset</button>
+          <button id ="mult">Multiplication</button>
+          <button id = "div">Division</button>
+          <button id = "add">Addition</button>
+          <button id = "sub">Subtraction</button>
+        <button id="reset">Reset</button>
         <br><br><br><br><br><h3 style="text-align: center;">Result</h3>
         <h3 style="text-align: center; color:darkred;"><output id = "output"></output></h3>
     
@@ -109,7 +111,7 @@
 	}
 ]);
 
-var test = calcContract.at('0xf4ec982d5a5b6f3f3df6c60632a56733b1111c25');
+var test= calcContract.at('0xf4ec982d5a5b6f3f3df6c60632a56733b1111c25');
     
     var mult = document.getElementById("mult");
     var reset = document.getElementById("reset");
@@ -160,9 +162,10 @@ var test = calcContract.at('0xf4ec982d5a5b6f3f3df6c60632a56733b1111c25');
        
     }); 
     reset.addEventListener("click",function(){
-
-        location.reload();  
-          });
+		document.getElementById("input1").value = '';
+		document.getElementById("input2").value = '';
+        document.getElementById("output").value = '';
+        });
 
 
 
